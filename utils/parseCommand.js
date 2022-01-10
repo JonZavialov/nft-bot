@@ -13,9 +13,26 @@ async function parseCommand(commands, msg) {
     }
 
     if(!commands[command]) return
-
     let method = commands[command]()
-    method.run(msg, args)
+
+    //check for permissions
+    if(method.permissions.length > 0){
+        for(let permission of method.permissions){
+            if(!msg.member.permissions.has(permission)){
+                msg.reply(`You do not have permission to run this command`)
+                return
+            }
+        }
+    }
+
+    //check that correct amount of args is provided
+    if(method.args.length > args.length){
+        msg.reply(`You didn't provide all the arguments for ${method.name}!`)
+    }else if(method.permissions.length < args.length){
+        msg.reply(`You provided too many arguements for ${method.name}!`)
+    }else{
+        method.run(msg, args)
+    }
 }
 
 module.exports = parseCommand

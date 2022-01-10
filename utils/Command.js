@@ -10,7 +10,6 @@ class Command{
 
     run(msg, args){
         this.method(msg, args)
-        console.log(`${msg.author.tag} ran ${this.name}`)
     }
 }
 
