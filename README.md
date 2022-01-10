@@ -1,12 +1,12 @@
-<h1 align="center">Bot Framework</h1>
+<h1 align="center">NFT Bot</h1>
 
 <p align="center">
-<img src="https://img.shields.io/tokei/lines/github/JonZavialov/bot-framework?color=9cf" alt="Total Lines" />
-<img src="https://img.shields.io/github/repo-size/JonZavialov/bot-framework?color=9cf&logo=GitHub" alt="GitHub Repo Size" />
-<img src="https://img.shields.io/github/commit-activity/m/JonZavialov/bot-framework?color=9cf&logo=GitHub" alt="Commit Activity" />
+<img src="https://img.shields.io/tokei/lines/github/JonZavialov/nft-bot?color=9cf" alt="Total Lines" />
+<img src="https://img.shields.io/github/repo-size/JonZavialov/nft-bot?color=9cf&logo=GitHub" alt="GitHub Repo Size" />
+<img src="https://img.shields.io/github/commit-activity/m/JonZavialov/nft-bot?color=9cf&logo=GitHub" alt="Commit Activity" />
 </p>
 
-<p align="center">A general framework for Discord bots using Node</p>
+<p align="center">A general bot created for NFT discord servers</p>
 
 ## ⚙️ Configuration
 
