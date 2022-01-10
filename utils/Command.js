@@ -1,9 +1,10 @@
 class Command{
-    constructor(method, name, description, args, permissions){
+    constructor(method, name, description, alias, args, permissions){
         this.method = method
         this.name = name
         this.description = description
         this.args = args
+        this.alias = alias
         this.permissions = permissions
     }
 
