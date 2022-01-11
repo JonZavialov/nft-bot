@@ -1,16 +1,35 @@
 //Jonathan Zavialov
 
 const { Client, Intents } = require('discord.js')
-const client = new Client({  intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.GUILD_MEMBERS, Intents.FLAGS.GUILD_INVITES] })
+const client = new Client({  
+    intents: [
+        Intents.FLAGS.GUILDS, 
+        Intents.FLAGS.GUILD_MESSAGES, 
+        Intents.FLAGS.GUILD_MEMBERS, 
+        Intents.FLAGS.GUILD_INVITES, 
+        Intents.FLAGS.DIRECT_MESSAGES
+    ],
+    partials: [
+        'CHANNEL'
+    ] 
+    })
 
 const config = require('./config.json')
 const parseCommand = require('./utils/parseCommand')
 const getAllCommands = require('./utils/getAllCommands')
 const addInviteForUser = require('./utils/addInviteForUser')
 const subtractInviteForUser = require('./utils/subtractInviteForUser')
+const saveMap = require('./utils/saveMap')
+const loadMapFromFile = require('./utils/loadMapFromFile')
 const commands = getAllCommands()
 
-global.userInvites = new Map()
+try{
+    const records = require('./records.json')
+    loadMapFromFile(records)
+}catch{
+    global.userInvites = new Map()
+}
+
 const wait = require("timers/promises").setTimeout
 
 client.on('ready', async() => {
@@ -26,6 +45,11 @@ client.on('ready', async() => {
 })
 
 client.on('messageCreate', (msg) => {
+    if(msg.channel.type == 'DM'){
+        if(msg.content == "save records" && msg.author.id == config.ownerID) saveMap()
+        return
+    }
+    
     if(msg.content.startsWith(config.prefix)){
         parseCommand(commands, msg)
     }

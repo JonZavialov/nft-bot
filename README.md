@@ -13,13 +13,16 @@
 
 1. Create a discord bot
 2. Add a file to the root folder named `config.json`
-3. In the file, add the following. Your bot's token goes in the `token` field, and your bot's prefix goes in the `prefix` field.
+3. In the file, add the following. Your bot's token goes in the `token` field, your bot's prefix goes in the `prefix` field, your bot's guild ID goes in the `guildID` field, and your ID goes in the `ownerID` field.
 ```json
 {
     "token": "your_token_here",
-    "prefix": "your_prefix_here"
+    "prefix": "your_prefix_here",
+    "guildID": "your_guild_id_here",
+    "ownerID": "your_owner_id_here"
 }
 ```
+4. The bot has a secret save records command. By dming the bot `save records`, the record of invites from your server will be saved to a file. This will save the records in case the bot crashes and will be loaded on the next startup.
 
 ## 👨‍💻 Developlment
 
