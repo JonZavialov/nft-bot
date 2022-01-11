@@ -7,6 +7,7 @@
 </p>
 
 <p align="center">A general bot created for NFT discord servers</p>
+<p align="center">NOTE: this bot is only meant to be used in a single server</p>
 
 ## ⚙️ Configuration
 
