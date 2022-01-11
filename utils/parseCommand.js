@@ -26,7 +26,7 @@ async function parseCommand(commands, msg) {
     }
 
     //check that correct amount of args is provided
-    if(method.args.length > args.length){
+    if(method.args.length > args.length && !method.argsOptional){
         msg.reply(`You didn't provide all the arguments for ${method.name}!`)
     }else if(method.args.length < args.length){
         msg.reply(`You provided too many arguements for ${method.name}!`)
