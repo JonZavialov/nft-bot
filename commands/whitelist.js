@@ -30,7 +30,7 @@ async function command(msg, args){
         console.log("admin whitelisted wrong id")
     }
     if(!member){
-        msg.reply(`${args[0]} is not a member of the server`)
+        msg.reply(`${args[0]} is not a member of the server, please use the member's ID`)
         return
     }
 

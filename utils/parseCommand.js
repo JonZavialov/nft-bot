@@ -16,13 +16,17 @@ async function parseCommand(commands, msg) {
     let method = commands[command]()
 
     //check for permissions
+    let hasPermissions = true
     if(method.permissions.length > 0){
         for(let permission of method.permissions){
             if(!msg.member.permissions.has(permission)){
-                msg.reply(`You do not have permission to run this command`)
-                return
+                hasPermissions = false
             }
         }
+    }
+    if(!hasPermissions) {
+        msg.reply(`You do not have permission to run this command`)
+        return
     }
 
     //check that correct amount of args is provided
