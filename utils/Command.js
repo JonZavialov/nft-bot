@@ -1,3 +1,5 @@
+// Jonathan Zavialov
+
 class Command{
     constructor(method, name, description, alias, args, permissions, argsOptional = false){
         this.method = method
