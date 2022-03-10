@@ -26,4 +26,4 @@
 
 ## 👨‍💻 Developlment
 
-This project is a currently in progress by Jonathan.
+This project has been completed.
