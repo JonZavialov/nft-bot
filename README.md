@@ -24,6 +24,10 @@
 ```
 4. The bot has a secret save records command. By dming the bot `save records`, the record of invites from your server will be saved to a file. This will save the records in case the bot crashes and will be loaded on the next startup.
 
+## 🧠 Framework
+
+This bot utilizes a framework which I coded. It is adaptable and can be used to easily make custom discord bots. The repository can be seen [here](https://github.com/JonZavialov/bot-framework).
+
 ## 👨‍💻 Developlment
 
 This project has been completed.
