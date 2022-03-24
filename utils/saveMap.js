@@ -1,3 +1,5 @@
+// Jonathan Zavialov
+
 const fs = require('fs')
 
 function saveMap(){
